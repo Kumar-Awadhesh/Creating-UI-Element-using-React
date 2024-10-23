@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Template</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    //using React approch-->
+
+    //creating element and adding textContent.
+    let text = React.createElement(
+        "p",
+        null,
+        "Seize the day"
+
+    );
+
+    //mount the created React element to the div.
+    ReactDOM.render(text, document.getElementById("root"))
+
+    //using traditional javascript-->
+
+    //get div by id.
+    let container = document.getElementById("root");
+
+    //create p tag element.
+    let containt = document.createElement("p");
+    //add the text to p tag
+    containt.textContent = "Seize the day";
+
+    //append the p tag to container div.
+    container.append(containt);
+  </script>
+</html>
